@@ -137,8 +137,8 @@ const portfolio = () => {
                         imgUrl={wwlCoverImage} 
                         title="&ldquo;Weightless Weightloss&rdquo; App"
                         summary="A feature-rich personal training application built and deployed with React, Bootstrap, React Router and Netlify. Users can plan and execute timed workout sessions, or perform pre-programmed ones, using guided bodyweight exercises that require no equipment or weights."
-                        projectUrl="/"
-                        githubUrl="/"                        
+                        projectUrl="https://weightless-weightloss.netlify.app/"
+                        githubUrl="https://github.com/Boxie999/weightless-weightloss"                        
                         />
                     </div>
                     
