@@ -4,11 +4,12 @@ import Head from 'next/head';
 import Layout from '@/components/Layout';
 import Link from 'next/link';
 import GithubIcon from '@/components/Icons';
-import wwlCoverImage from "../../public/images/wwl-cover2.JPG";
-import pmnCoverImage from "../../public/images/pmn-cover.JPG";
+// import wwlCoverImage from "../../public/images/wwl-cover2.JPG";
+// import pmnCoverImage from "../../public/images/pmn-cover.JPG";
 import Image from 'next/image';
 import { LinkArrow } from '@/components/Icons';
 import TransitionEffect from '@/components/TransitionEffect';
+import sunsetArt from "../../public/images/profile/sunset-digital-art.png"
 
 // const projects = [
 //     {
@@ -134,7 +135,7 @@ const portfolio = () => {
                     <div className='col-span-12'>
                         <FeaturedProject 
                         type="Featured Project"
-                        imgUrl={wwlCoverImage} 
+                        imgUrl="/images/wwl-cover2.JPG" 
                         title="&ldquo;Weightless Weightloss&rdquo; App"
                         summary="A feature-rich personal training application built and deployed with React, Bootstrap, React Router and Netlify. Users can plan and execute timed workout sessions, or perform pre-programmed ones, using guided bodyweight exercises that require no equipment or weights."
                         projectUrl="https://weightless-weightloss.netlify.app/"
@@ -145,7 +146,7 @@ const portfolio = () => {
                     <div className='col-span-12'>
                         <FeaturedProject 
                         type="Featured Project"
-                        imgUrl={pmnCoverImage} 
+                        imgUrl="/images/pmn-cover.JPG" 
                         title="&ldquo;Perfect Movie Night&rdquo; App"
                         summary="Streaming platform aggregation app built and deployed with jQuery, Bootstrap, Server APIs and Github Pages. Users can easily search, access and store information for movies and TV shows across ten of the largest streaming platforms all from one place."
                         projectUrl="https://drrobertson9673.github.io/Perfect_Movie_Night/index.html"
@@ -156,7 +157,7 @@ const portfolio = () => {
                     <div className='col-span-6 sm:col-span-12'>
                         <Project 
                         type="Recent Project"
-                        imgUrl={wwlCoverImage}
+                        imgUrl={sunsetArt}
                         title="Travel Companion Weather App"
                         summary="Created and deployed with JavaScript, Bootstrap, Server APIs and Github Pages. Access 5-day forecast travel weather information on-the-go in multiple cities."
                         projectUrl="/"
@@ -167,7 +168,7 @@ const portfolio = () => {
                     <div className='col-span-6 sm:col-span-12'>
                         <Project 
                         type="Recent Project"
-                        imgUrl={wwlCoverImage}
+                        imgUrl={sunsetArt}
                         title="Travel Companion Weather App"
                         summary="Created and deployed with JavaScript, Bootstrap, Server APIs and Github Pages. Access 5-day forecast travel weather information on-the-go in multiple cities."
                         projectUrl="/"

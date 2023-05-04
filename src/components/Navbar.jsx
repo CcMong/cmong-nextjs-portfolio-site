@@ -5,7 +5,6 @@ import { useRouter } from 'next/router';
 import GithubIcon, { CvIcon, EmailIcon, EmailIcon2, EmailIcon3, LinkedInIcon, MoonIcon, ResumeIcon, SunIcon, TwitterIcon } from './Icons';
 import { motion } from 'framer-motion';
 import useThemeSwitcher from './hooks/useThemeSwitcher';
-import resume from "../../public/CV-C.MONG-FEWDev_.pdf";
 
 // const CustomLink = ({ href, title, className="" }) => {
 //     const router = useRouter();
@@ -185,7 +184,7 @@ const Navbar = () => {
                     />
                 </motion.a> 
                 
-                <motion.a href={resume} target={"_blank"}
+                <motion.a href="/CV.pdf" target={"_blank"}
                 whileHover={{y:-3}}
                 className='w-6 ml-3'>
                     <CvIcon />
@@ -260,7 +259,7 @@ const Navbar = () => {
                         />
                     </motion.a> 
                     
-                    <motion.a href={resume} target={"_blank"}
+                    <motion.a href="/CV.pdf" target={"_blank"}
                     whileHover={{y:-3}}
                     className='w-6 ml-3 sm:mx-1'>
                         <CvIcon />
