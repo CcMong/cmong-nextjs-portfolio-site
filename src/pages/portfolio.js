@@ -61,6 +61,8 @@ const FeaturedProject = ({ type, title, summary, imgUrl, projectUrl, githubUrl }
                 sizes="(max-width: 768px) 100vw,
                 (max-width: 1200px) 50vw,
                 50vw"
+                width="600"
+                height="200"
                 />
             </Link>
 
@@ -92,7 +94,8 @@ const Project = ({ type, title, imgUrl, projectUrl, githubUrl, summary }) => {
             {/*Project Image*/}
             <Link href={projectUrl} target="_blank"
             className='w-full cursor-pointer overflow-hidden rounded-lg'>
-                <Image src={imgUrl} alt={title} className="w-full h-auto" />
+                <Image src={imgUrl} alt={title} className="w-full h-auto" width="600"
+                height="200" />
             </Link>
 
             {/*Project Details*/}
@@ -106,7 +109,7 @@ const Project = ({ type, title, imgUrl, projectUrl, githubUrl, summary }) => {
                     <Link href={githubUrl} target='_blank' className='w-10 md:w-8 hover:scale-110 ease-in-out duration-300'> <GithubIcon /> </Link>
                     <Link href={projectUrl} target='_blank'
                     className='flex items-center ml-8 rounded-lg bg-dark dark:bg-light text-light dark:text-dark p-2 px-6 text-md font-semibold hover:bg-light dark:hover:bg-dark hover:text-dark dark:hover:text-light border-2 border-solid border-transparent hover:border-dark dark:hover:border-light shadow-gray-400 shadow-sm hover:scale-105 ease-in-out duration-300 md:text-sm'
-                    > Visit Site <LinkArrow className={"w-3 ml-1"} /> 
+                    > Visit <LinkArrow className={"w-3 ml-1"} /> 
                     </Link>
                 </div>
             </div>
@@ -157,7 +160,7 @@ const portfolio = () => {
                     <div className='col-span-6 sm:col-span-12'>
                         <Project 
                         type="Recent Project"
-                        imgUrl={sunsetArt}
+                        imgUrl="/images/pmn-cover.JPG"
                         title="Travel Companion Weather App"
                         summary="Created and deployed with JavaScript, Bootstrap, Server APIs and Github Pages. Access 5-day forecast travel weather information on-the-go in multiple cities."
                         projectUrl="/"
@@ -168,7 +171,7 @@ const portfolio = () => {
                     <div className='col-span-6 sm:col-span-12'>
                         <Project 
                         type="Recent Project"
-                        imgUrl={sunsetArt}
+                        imgUrl="/images/pmn-cover.JPG"
                         title="Travel Companion Weather App"
                         summary="Created and deployed with JavaScript, Bootstrap, Server APIs and Github Pages. Access 5-day forecast travel weather information on-the-go in multiple cities."
                         projectUrl="/"
