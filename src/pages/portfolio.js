@@ -77,7 +77,7 @@ const FeaturedProject = ({ type, title, summary, imgUrl, projectUrl, githubUrl }
                     <Link href={githubUrl} target='_blank' className='w-10 hover:scale-110 ease-in-out duration-300'> <GithubIcon /> </Link>
                     <Link href={projectUrl} target='_blank'
                     className='ml-8 rounded-lg bg-dark dark:bg-light text-light dark:text-dark p-2 px-6 text-md font-semibold hover:bg-light dark:hover:bg-dark hover:text-dark dark:hover:text-light border-2 border-solid border-transparent hover:border-dark dark:hover:border-light shadow-gray-400 shadow-sm hover:scale-105 flex items-center ease-in-out duration-300 sm:px-4 sm:text-base'
-                    >Visit&nbsp;Site <LinkArrow className={"w-3 ml-1"} /></Link>
+                    >Visit&nbsp;Site <LinkArrow className={"max-w-[15px] ml-1"} /></Link>
                 </div>
             </div>
         </article>
@@ -109,7 +109,7 @@ const Project = ({ type, title, imgUrl, projectUrl, githubUrl, summary }) => {
                     <Link href={githubUrl} target='_blank' className='w-10 md:w-8 hover:scale-110 ease-in-out duration-300'> <GithubIcon /> </Link>
                     <Link href={projectUrl} target='_blank'
                     className='flex items-center ml-8 rounded-lg bg-dark dark:bg-light text-light dark:text-dark p-2 px-6 text-md font-semibold hover:bg-light dark:hover:bg-dark hover:text-dark dark:hover:text-light border-2 border-solid border-transparent hover:border-dark dark:hover:border-light shadow-gray-400 shadow-sm hover:scale-105 ease-in-out duration-300 md:text-sm'
-                    > Visit <LinkArrow className={"w-3 ml-1"} /> 
+                    > Visit <LinkArrow className={"max-w-[15px] ml-1"} /> 
                     </Link>
                 </div>
             </div>

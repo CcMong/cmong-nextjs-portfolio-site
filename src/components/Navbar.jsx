@@ -267,7 +267,7 @@ const Navbar = () => {
 
                     {/*Dark/Light Mode Button */}
                     <button onClick={() => setMode(mode === "light" ? "dark" : "light")}
-                    className={`ml-4 w-6 flex items-center justify-center rounded-full p-1 ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}`}>
+                    className={`ml-4 w-8 flex items-center justify-center rounded-full p-1 ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}`}>
                         {mode === "dark" ? 
                         <MoonIcon className={"fill-dark"} />
                         : <SunIcon className={"fill-dark"} />
