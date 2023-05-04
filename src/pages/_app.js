@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }) {
         <Head>
           {/*We use this in every page, so cut from index.js and put in here*/}
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/images/logo-bg-dark.png" />
         </Head>
         <main className={`${montserrat.variable} font-mont bg-light dark:bg-dark dark:bg-gradient-to-r from-dark to-[#0303429c] w-full min-h-screen`}>
           {/*Above, used the light variable created within tailwind.config.js */}

@@ -184,7 +184,7 @@ const Navbar = () => {
                     />
                 </motion.a> 
                 
-                <motion.a href="/CV.pdf" target={"_blank"}
+                <motion.a href="/CV-C.MONG.pdf" target={"_blank"}
                 whileHover={{y:-3}}
                 className='w-6 ml-3'>
                     <CvIcon />
@@ -259,7 +259,7 @@ const Navbar = () => {
                         />
                     </motion.a> 
                     
-                    <motion.a href="/CV.pdf" target={"_blank"}
+                    <motion.a href="/CV-C.MONG.pdf" target={"_blank"}
                     whileHover={{y:-3}}
                     className='w-6 ml-3 sm:mx-1'>
                         <CvIcon />
@@ -267,7 +267,7 @@ const Navbar = () => {
 
                     {/*Dark/Light Mode Button */}
                     <button onClick={() => setMode(mode === "light" ? "dark" : "light")}
-                    className={`ml-4 flex items-center justify-center rounded-full p-1 ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}`}>
+                    className={`ml-4 w-6 flex items-center justify-center rounded-full p-1 ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}`}>
                         {mode === "dark" ? 
                         <MoonIcon className={"fill-dark"} />
                         : <SunIcon className={"fill-dark"} />

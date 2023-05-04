@@ -89,7 +89,7 @@ export default function Home() {
                 >Contact 
                 </Link> {/*CHANGE THIS TO LINK TO CONTACT FORM */}
 
-                <Link href="/CV.pdf" target={"_blank"}
+                <Link href="/CV-C.MONG.pdf" target={"_blank"}
                 className='flex items-center bg-dark dark:bg-light text-light dark:text-dark p-2 px-6 rounded-xl text-lg font-semibold hover:bg-light hover:dark:bg-dark hover:text-dark hover:dark:text-light border-2 border-solid border-transparent hover:border-dark hover:dark:border-light shadow-gray-400 shadow-md hover:scale-110 mr-4 md:p-2 md:px-4 md:text-base'
                 download={true}
                 >Resumé <LinkArrow className={"w-6 ml-1"} />
