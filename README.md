@@ -2,7 +2,7 @@
 
 ## Description
 
-I wanted to create a more up-to-date web developer portfolio site using ReactJS. I decided to go one further and use the opportunity to get more familiar with a React framework. As a result, this portfolio site was built completely from scratch using NextJS and the utility-first CSS framework, Tailwind CSS. The latter allowed me to do the majority of my styling within the JSX markup, and I believe it is customisable, adaptable, and provides scope for potentially scaling an application relatively effortlessly.
+I wanted to create a more up-to-date web developer portfolio site using ReactJS. I decided to go one further and use the opportunity to get more familiar with a React framework. As a result, this portfolio site was built completely from scratch using NextJS (incorporating Accessibility and SEO best practices) and the utility-first CSS framework, Tailwind CSS. The latter allowed me to do the majority of my styling within the JSX markup, and I believe it is customisable, adaptable, and provides scope for potentially scaling an application relatively effortlessly.
 
 ### Resources Used in This Project
 

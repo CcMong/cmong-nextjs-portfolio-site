@@ -129,7 +129,7 @@ const Navbar = () => {
     <header className='w-full px-32 xl:px-14 pr-24 py-8 font-medium flex items-center justify-between dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8'>
 
         {/*Hamburger Button */}
-        <button className='flex flex-col justify-center items-center hidden lg:flex' onClick={handleMenuClick}>
+        <button className='hidden lg:flex lg:flex-col justify-center items-center' onClick={handleMenuClick}>
             <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-in-out h-0.5 w-6 rounded-sm ${isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"}`}></span>
             {/*Want to hide the middle span when the menu is open, and cross the outer spans to form an "x" */}
             <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-in-out h-0.5 w-6 rounded-sm my-0.5 ${isOpen ? "opacity-0" : "opacity-100"}`}></span>
@@ -144,7 +144,7 @@ const Navbar = () => {
                 <ul className='flex'>
                     {navLinks.map((link) => (
                         
-                    <motion.a key={link} href={link === "Home" ? `/` : link === "Skills" ? `/about#skills` : `/${link.toLowerCase()}`}
+                    <motion.a key={link} href={link === "Home" ? `/` : link === "Skills" ? `/about#skills` : link === "Contact" ? `mailto:fullstackcodex@gmail.com` : `/${link.toLowerCase()}`}
                     className={link === navLinks[0] ? `mr-4 ${navLinkStyleClass}` : link === navLinks[-1] ? `ml-4 ${navLinkStyleClass}` : `mx-4 ${navLinkStyleClass}`}>
                         <li>{link}</li>
                         {/* <span className='border-b-4 border-indigo-500 border-t-4'>oijooij</span> */}
@@ -213,6 +213,11 @@ const Navbar = () => {
             initial={{scale: 0, opacity: 0, x: "-50%", y: "-50%"}}
             animate={{scale: 1, opacity: 1}}
             className='min-w-[70vw] flex flex-col justify-between items-center z-30 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32'>
+
+                <div className='absolute left-[50%] top-5 translate-x-[-50%]'>
+                    <Logo />
+                </div>
+                
 
                 <nav className='flex flex-col items-center justify-center'>            
                     {/*Add Blog/Articles link later on */}

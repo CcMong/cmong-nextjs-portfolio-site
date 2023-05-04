@@ -52,23 +52,19 @@ const about = () => {
                 <div className='col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8'>
                     <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75'>About&nbsp;Me</h2>
                     <p className='font-medium dark:text-light'>
-                        Hi! I&apos;m <span className='font-bold text-cyan-700 dark:text-primaryDark'>Charles Mong</span>, a <span className='font-bold text-cyan-700 dark:text-primaryDark'>front-end web developer</span> based near London, UK. I love to build applications that solve problems and create enjoyable user experiences.
-                    </p>
+                        Hi! I&apos;m <span className='font-bold text-cyan-700 dark:text-primaryDark'>Charles Mong</span>, a <span className='font-bold text-cyan-700 dark:text-primaryDark'>freelance web developer</span> based near London, UK. I specialise in building web applications using <span className='font-bold text-cyan-700 dark:text-primaryDark'>JavaScript</span>, <span className='font-bold text-cyan-700 dark:text-primaryDark'>React.js</span> and <span className='font-bold text-cyan-700 dark:text-primaryDark'>Next.js</span>.
+                    </p>  
 
                     <p className='font-medium my-4 dark:text-light'>
-                        I specialise in developing web applications using <span className='font-bold text-cyan-700 dark:text-primaryDark'>JavaScript</span>, <span className='font-bold text-cyan-700 dark:text-primaryDark'>React.js</span> and <span className='font-bold text-cyan-700 dark:text-primaryDark'>Next.js</span>.                        
-                    </p>
+                        My approach to web development goes beyond just the aesthetic - it is about solving problems and crafting intuitive, value-rich experiences for users. My true passion lies in building an idea or vision into something that takes on a life of its own, with the potential for real impact.
+                    </p>  
 
                     <p className='font-medium my-4 dark:text-light'>
-                        With a <span className='font-bold text-cyan-700 dark:text-primaryDark'>Master&apos;s Degree in Chemical Engineering</span> (University of Cambridge (UK)) and experience in Banking and Finance, Oil and Gas, and Agriculture, I have honed analytical problem-solving skills, creative adaptability under pressure, exceptional communication and organisational skills, and a commitment to delivering high-quality work that I believe all set me apart as a developer.
+                        With a background in Engineering and Finance, my analytical problem-solving skills, creative adaptability under pressure, exceptional communication and organisational skills, attention to detail, and commitment to delivering excellent work equip me to provide high-quality service to clients.
                     </p>
-                    <p className='font-medium my-4 dark:text-light'>
-                        My approach to web development is ultimately about solving problems and crafting intuitive, value-rich experiences for users. This is why my real passion lies in building an idea or vision into something that takes on a life of its own, with the potential for genuine impact. I am always seeking 
-                        innovative ways to bring my clients' visions to life and enrich user experiences. 
-                    </p>
+
                     <p className='font-medium dark:text-light'>
-
-                        I look forward to the opportunity to work with you on your next project.
+                        Reach out and let&apos;s connect - I&apos;d love to hear about your next project. I am always seeking innovative ways to bring my clients&apos; visions to life, and I look forward to the opportunity of working together to build yours.
                     </p>
                 </div>
 
@@ -85,19 +81,19 @@ const about = () => {
                 <div className='col-span-2 flex flex-col items-end justify-between dark:text-light xl:col-span-8 xl:flex-row xl:items-center md:order-3'>
                     <div className='flex flex-col items-end justify-center xl:items-center'>
                         <span className='inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl'>
-                            <AnimationNumbers value={25} />+
+                            <AnimationNumbers value={15} />+
                         </span>
                         <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm'>satisfied clients</h2>
                     </div>
                     <div className='flex flex-col items-end justify-center xl:items-center'>
                         <span className='inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl'>
-                            <AnimationNumbers value={20}/>+
+                            <AnimationNumbers value={10}/>+
                         </span>
                         <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm'>projects completed</h2>
                     </div>
                     <div className='flex flex-col items-end justify-center xl:items-center'>
                         <span className='inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl'>
-                            <AnimationNumbers value={2}/>+
+                            <AnimationNumbers value={1}/>+
                         </span>
                         <h2 className='text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-lg sm:text-base xs:text-sm'>years of experience</h2>
                     </div>

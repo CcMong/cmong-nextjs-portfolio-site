@@ -79,8 +79,8 @@ export default function Home() {
               initial="initial"
               animate="animate"
               >                
-                Hi! I'm <span className='font-bold text-cyan-700 dark:text-primaryDark text-lg'>Charles Mong,</span> a <span className='font-bold text-cyan-700 dark:text-primaryDark'>Front-end Developer.</span> I use <span className='font-bold text-cyan-700 dark:text-primaryDark'>React JS</span> to morph ideas into innovative and accessible <span className='font-bold text-cyan-700 dark:text-primaryDark'>web applications</span> that deliver <span className='font-bold text-cyan-700 dark:text-primaryDark'>outstanding user experiences</span>. <br /><br />
-                I&apos;m ready when you are - Get in touch and let's connect!
+                Hi! I&apos;m <span className='font-bold text-cyan-700 dark:text-primaryDark text-lg md:text-base sm:text-sm'>Charles Mong,</span> a <span className='font-bold text-cyan-700 dark:text-primaryDark'>Front-end Developer.</span> I use <span className='font-bold text-cyan-700 dark:text-primaryDark'>React JS</span> to morph ideas into innovative and accessible <span className='font-bold text-cyan-700 dark:text-primaryDark'>web applications</span> that deliver <span className='font-bold text-cyan-700 dark:text-primaryDark'>outstanding user experiences</span>. <br /><br />
+                I&apos;m ready when you are - Get in touch and let&apos;s connect!
               </motion.p>
 
               <div className='flex items-center self-start mt-3 lg:self-center'>
