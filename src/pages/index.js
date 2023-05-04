@@ -9,6 +9,7 @@ import GithubIcon, { LinkArrow, LinkedInIcon } from '@/components/Icons';
 import life from "../../public/images/ezgif.com-resize.gif"
 import HireMe from '@/components/HireMe';
 import TransitionEffect from '@/components/TransitionEffect';
+import resume from "../../public/CV-C.MONG-FEWDev_.pdf";
 
 export default function Home() {
   return (
@@ -89,7 +90,7 @@ export default function Home() {
                 >Contact 
                 </Link> {/*CHANGE THIS TO LINK TO CONTACT FORM */}
 
-                <Link href="/dummy.pdf" target={"_blank"}
+                <Link href={resume} target={"_blank"}
                 className='flex items-center bg-dark dark:bg-light text-light dark:text-dark p-2 px-6 rounded-xl text-lg font-semibold hover:bg-light hover:dark:bg-dark hover:text-dark hover:dark:text-light border-2 border-solid border-transparent hover:border-dark hover:dark:border-light shadow-gray-400 shadow-md hover:scale-110 mr-4 md:p-2 md:px-4 md:text-base'
                 download={true}
                 >Resumé <LinkArrow className={"w-6 ml-1"} />

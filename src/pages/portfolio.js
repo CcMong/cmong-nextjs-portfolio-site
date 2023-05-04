@@ -10,40 +10,40 @@ import Image from 'next/image';
 import { LinkArrow } from '@/components/Icons';
 import TransitionEffect from '@/components/TransitionEffect';
 
-const projects = [
-    {
-        type: "",
-        title: "Bodyweight Fitness and Exercise App",
-        summary: "",
-        imgUrl: "",
-        projectUrl: "",
-        githubUrl: "",
-    },
-    {
-        type: "",
-        title: "Bodyweight Fitness and Exercise App",
-        summary: "",
-        imgUrl: "",
-        projectUrl: "",
-        githubUrl: "",
-    },
-    {
-        type: "",
-        title: "Bodyweight Fitness and Exercise App",
-        summary: "",
-        imgUrl: "",
-        projectUrl: "",
-        githubUrl: "",
-    },
-    {
-        type: "",
-        title: "Bodyweight Fitness and Exercise App",
-        summary: "",
-        imgUrl: "",
-        projectUrl: "",
-        githubUrl: "",
-    }
-]
+// const projects = [
+//     {
+//         type: "",
+//         title: "Bodyweight Fitness and Exercise App",
+//         summary: "",
+//         imgUrl: "",
+//         projectUrl: "",
+//         githubUrl: "",
+//     },
+//     {
+//         type: "",
+//         title: "Bodyweight Fitness and Exercise App",
+//         summary: "",
+//         imgUrl: "",
+//         projectUrl: "",
+//         githubUrl: "",
+//     },
+//     {
+//         type: "",
+//         title: "Bodyweight Fitness and Exercise App",
+//         summary: "",
+//         imgUrl: "",
+//         projectUrl: "",
+//         githubUrl: "",
+//     },
+//     {
+//         type: "",
+//         title: "Bodyweight Fitness and Exercise App",
+//         summary: "",
+//         imgUrl: "",
+//         projectUrl: "",
+//         githubUrl: "",
+//     }
+// ]
 
 const FeaturedProject = ({ type, title, summary, imgUrl, projectUrl, githubUrl }) => {
 
