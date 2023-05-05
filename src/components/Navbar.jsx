@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React, { useState } from 'react';
 import Logo from './Logo';
 import { useRouter } from 'next/router';
-import GithubIcon, { CvIcon, EmailIcon, EmailIcon2, EmailIcon3, LinkedInIcon, MoonIcon, ResumeIcon, SunIcon, TwitterIcon } from './Icons';
+import GithubIcon, { CvIcon, EmailIcon3, LinkedInIcon, MoonIcon, SunIcon, TwitterIcon } from './Icons';
 import { motion } from 'framer-motion';
 import useThemeSwitcher from './hooks/useThemeSwitcher';
 
@@ -156,14 +156,14 @@ const Navbar = () => {
             {/*Links to Socials and Contact links, and Light/Dark Mode button*/}
             <nav className='flex items-center justify-center flex-wrap'>
                 
-                <motion.a href="https://github.com" target={"_blank"}
+                <motion.a href="https://github.com/CcMong" target={"_blank"}
                 whileHover={{y:-3}}
                 className='w-6 mr-3'>
                     <GithubIcon />
                 </motion.a>
                 
                 {/* <div className='rounded-full shadow-md shadow-[#602e9e] p-2 cursor-pointer hover:scale-110 ease-in-out duration-300 w-8 h-8 mx-1'> */}
-                <motion.a href="https://linkedin.com" target={"_blank"}
+                <motion.a href="https://www.linkedin.com/in/charles-mong-642b25175" target={"_blank"}
                 whileHover={{y:-3}}
                 // whileTap={{scale:0.9}}
                 className='w-6 mx-3'>
@@ -231,14 +231,14 @@ const Navbar = () => {
                 {/*Links to Socials and Contact links, and Light/Dark Mode button*/}
                 <nav className='flex items-center justify-center flex-wrap mt-2'>
                     
-                    <motion.a href="https://github.com" target={"_blank"}
+                    <motion.a href="https://github.com/CcMong" target={"_blank"}
                     whileHover={{y:-3}}
                     className='w-6 mr-3 bg-light rounded-full dark:bg-dark sm:mx-1'>
                         <GithubIcon />
                     </motion.a>
                     
                     {/* <div className='rounded-full shadow-md shadow-[#602e9e] p-2 cursor-pointer hover:scale-110 ease-in-out duration-300 w-8 h-8 mx-1'> */}
-                    <motion.a href="https://linkedin.com" target={"_blank"}
+                    <motion.a href="https://www.linkedin.com/in/charles-mong-642b25175" target={"_blank"}
                     whileHover={{y:-3}}
                     // whileTap={{scale:0.9}}
                     className='w-6 mx-3 sm:mx-1'>

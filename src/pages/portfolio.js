@@ -160,7 +160,7 @@ const portfolio = () => {
                     <div className='col-span-6 sm:col-span-12'>
                         <Project 
                         type="Recent Project"
-                        imgUrl="/images/pmn-cover.JPG"
+                        imgUrl="/images/weather-app.jpg"
                         title="Travel Companion Weather App"
                         summary="Created and deployed with JavaScript, Bootstrap, Server APIs and Github Pages. Access 5-day forecast travel weather information on-the-go in multiple cities."
                         projectUrl="/"
@@ -168,16 +168,16 @@ const portfolio = () => {
                         />
                     </div>
 
-                    <div className='col-span-6 sm:col-span-12'>
+                    {/* <div className='col-span-6 sm:col-span-12'>
                         <Project 
                         type="Recent Project"
-                        imgUrl="/images/pmn-cover.JPG"
+                        imgUrl="/images/weather-app.jpg"
                         title="Travel Companion Weather App"
                         summary="Created and deployed with JavaScript, Bootstrap, Server APIs and Github Pages. Access 5-day forecast travel weather information on-the-go in multiple cities."
                         projectUrl="/"
                         githubUrl="/"                        
                         />
-                    </div>
+                    </div> */}
                     
                     {/* <div className='col-span-6'>
                         Project 3

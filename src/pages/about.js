@@ -51,21 +51,33 @@ const about = () => {
             <div className='grid w-full grid-cols-8 gap-16 sm:gap-8'>
                 <div className='col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 md:col-span-8'>
                     <h2 className='mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75'>About&nbsp;Me</h2>
-                    <p className='font-medium dark:text-light'>
+                    <p className='font-medium my-4 dark:text-light'>
                         Hi! I&apos;m <span className='font-bold text-cyan-700 dark:text-primaryDark'>Charles Mong</span>, a <span className='font-bold text-cyan-700 dark:text-primaryDark'>freelance web developer</span> based near London, UK. I specialise in building web applications using <span className='font-bold text-cyan-700 dark:text-primaryDark'>JavaScript</span>, <span className='font-bold text-cyan-700 dark:text-primaryDark'>React.js</span> and <span className='font-bold text-cyan-700 dark:text-primaryDark'>Next.js</span>.
                     </p>  
 
                     <p className='font-medium my-4 dark:text-light'>
+                    <span className='font-bold text-cyan-700 dark:text-primaryDark'>Web development</span> goes beyond beauty - it solves problems and crafts intuitive, <span className='font-bold text-cyan-700 dark:text-primaryDark'>value-rich experiences for users</span>. I am passionate about turning an idea or vision into something that, quite simply, makes people's lives easier.
+                    </p>
+
+                    <p className='font-medium my-4 dark:text-light'>
+                        My background is in Engineering and Finance, and I believe that my skills and experiences acquired over the last 15 years enable me to be innovative and effective as a developer.
+                    </p>
+
+                    {/* <p className='font-medium my-4 dark:text-light'>
                         My approach to web development goes beyond just the aesthetic - it is about solving problems and crafting intuitive, value-rich experiences for users. My true passion lies in building an idea or vision into something that takes on a life of its own, with the potential for real impact.
                     </p>  
 
                     <p className='font-medium my-4 dark:text-light'>
                         With a background in Engineering and Finance, my analytical problem-solving skills, creative adaptability under pressure, exceptional communication and organisational skills, attention to detail, and commitment to delivering excellent work equip me to provide high-quality service to clients.
+                    </p> */}
+
+                    <p className='font-medium my-4 dark:text-light'>
+                    I&apos;d love to hear from you, and I look forward to offering my skills and passion to realise your vision.
                     </p>
 
-                    <p className='font-medium dark:text-light'>
+                    {/* <p className='font-medium my-4 dark:text-light'>
                         Reach out and let&apos;s connect - I&apos;d love to hear about your next project. I am always seeking innovative ways to bring my clients&apos; visions to life, and I look forward to the opportunity of working together to build yours.
-                    </p>
+                    </p> */}
                 </div>
 
                 <div className='col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark dark:border-light/75 dark:bg-dark bg-light p-4 shadow-lg shadow-gray-700 dark:shadow-white xl:col-span-4 md:order-1 md:col-span-8'>
