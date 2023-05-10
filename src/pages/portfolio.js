@@ -4,12 +4,9 @@ import Head from 'next/head';
 import Layout from '@/components/Layout';
 import Link from 'next/link';
 import GithubIcon from '@/components/Icons';
-// import wwlCoverImage from "../../public/images/wwl-cover2.JPG";
-// import pmnCoverImage from "../../public/images/pmn-cover.JPG";
 import Image from 'next/image';
 import { LinkArrow } from '@/components/Icons';
 import TransitionEffect from '@/components/TransitionEffect';
-import sunsetArt from "../../public/images/profile/sunset-digital-art.png"
 
 // const projects = [
 //     {
@@ -55,7 +52,7 @@ const FeaturedProject = ({ type, title, summary, imgUrl, projectUrl, githubUrl }
             <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[1.5rem] bg-dark dark:bg-light xs:-right-2 xs:h-[102%] sm:h-[102%] xs:w-full xs:rounded-[1rem]'/>
             {/*Project Image*/}
             <Link href={projectUrl} target="_blank"
-            className='w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full'>
+            className='w-1/2 cursor-pointer overflow-hidden rounded-lg lg:w-full hover:scale-105 ease-in-out duration-300'>
                 <Image src={imgUrl} alt={title} className="w-full h-auto"
                 priority
                 sizes="(max-width: 768px) 100vw,
@@ -88,12 +85,12 @@ const Project = ({ type, title, imgUrl, projectUrl, githubUrl, summary }) => {
 
     return (
 
-        <article className='w-full flex items-center justify-center rounded-xl border border-solid border-dark dark:border-light bg-light dark:bg-dark p-3 relative flex-col shadow-xl shadow-gray-700 xs:p-4'>
+        <article className='w-full flex items-center justify-center rounded-xl border border-solid border-dark dark:border-light bg-light dark:bg-dark p-5 relative flex-col shadow-xl shadow-gray-700 xs:p-4'>
 
             <div className='absolute top-0 -right-3 -z-10 w-[101%] h-[102%] rounded-[1.25rem] bg-dark dark:bg-light md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1rem]'/>
             {/*Project Image*/}
             <Link href={projectUrl} target="_blank"
-            className='w-full cursor-pointer overflow-hidden rounded-lg'>
+            className='w-full cursor-pointer overflow-hidden rounded-lg hover:scale-105 ease-in-out duration-300'>
                 <Image src={imgUrl} alt={title} className="w-full h-auto" width="600"
                 height="200" />
             </Link>

@@ -60,7 +60,7 @@ const about = () => {
                     </p>
 
                     <p className='font-medium my-4 dark:text-light'>
-                        My background is in Engineering and Finance, and I believe that my skills and experiences acquired over the last 15 years enable me to be innovative and effective as a developer.
+                        My background is in Engineering and Finance, and I have channelled the skills and experiences acquired over the last 15 years into becoming an innovative and highly effective developer.
                     </p>
 
                     {/* <p className='font-medium my-4 dark:text-light'>
@@ -72,7 +72,7 @@ const about = () => {
                     </p> */}
 
                     <p className='font-medium my-4 dark:text-light'>
-                    I&apos;d love to hear from you, and I look forward to offering my skills and passion to realise your vision.
+                    I&apos;d love to hear from you, and I look forward to putting my skills, experience and passion to work in realising your vision.
                     </p>
 
                     {/* <p className='font-medium my-4 dark:text-light'>

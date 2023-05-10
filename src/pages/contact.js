@@ -9,14 +9,16 @@ import { motion } from 'framer-motion';
 import { TwitterIcon, LinkedInIcon, EmailIcon3, CvIcon } from '@/components/Icons';
 import GithubIcon from '@/components/Icons';
 import { useState } from 'react';
-import PhoneInput from 'react-phone-input-2';
-import "react-phone-input-2/lib/style.css";
+//import PhoneInput from 'react-phone-input-2';
+//import "react-phone-input-2/lib/style.css";
+import PhoneInput from 'react-phone-number-input';
+import "react-phone-number-input/style.css";
 
 const contact = () => {
 
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
+  const [value, setValue] = useState();
   const [company, setCompany] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
@@ -41,14 +43,14 @@ const contact = () => {
             <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[102%] rounded-[2rem] bg-dark dark:bg-light'/>
 
             <div>
-              <Image src={contactImg} alt="Contact Me" className='rounded-lg'/>
+              <Image src={contactImg} alt="Contact Me" className='rounded-lg hover:scale-105 ease-in-out duration-300'/>
             </div>
 
             <div className='dark:text-light'>
-              <h3 className='pt-4 text-xl font-bold sm:text-lg'>Charles Mong</h3>
-              <p className='font-bold pt-2 sm:text-sm'>Front-End Developer</p>
-              <p className='-tracking-wide pt-4 sm:text-sm sm:tracking-wide'>I am available for freelance and full-time opportunities.</p>
-              <p className='-tracking-wide py-4 sm:text-sm sm:tracking-wide'>
+              <h3 className='pt-4 text-xl font-bold sm:text-lg mt-2'>Charles Mong</h3>
+              <p className='font-bold pt-2 sm:text-sm mb-4 '>Front-End Web Developer</p>
+              <p className='-tracking-wide pt-4 sm:text-sm sm:tracking-wide my-2'>I am available for freelance and full-time opportunities.</p>
+              <p className='-tracking-wide py-4 sm:text-sm sm:tracking-wide my-2'>
                 If you would like to work with me, or if you have any questions or enquiries, get in touch and let&apos;s have a chat.          
               </p>               
               
@@ -89,16 +91,16 @@ const contact = () => {
           </aside>
 
           {/*Contact Form*/}
-          <div className='col-span-5 w-full flex flex-col relative h-max rounded-2xl border-2 border-solid border-dark dark:border-light/75 dark:bg-dark bg-light p-4 shadow-lg shadow-gray-700 dark:shadow-white xl:col-span-5 md:order-1 md:col-span-8'>
+          <div className='col-span-5 w-full flex flex-col relative h-max rounded-2xl border-2 border-solid border-dark dark:border-light/75 dark:bg-dark bg-light p-4 shadow-lg shadow-dark/80 dark:shadow-white xl:col-span-5 md:order-1 md:col-span-8'>
 
             <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[102%] rounded-[2rem] bg-dark dark:bg-light'/>
             
-            <h1 className='text-2xl font-extrabold text-center dark:text-light'>Let&apos;s Talk About Your Projects...</h1>
+            <h1 className='text-2xl font-extrabold text-center dark:text-light my-8'>Let&apos;s Talk About Your Projects...</h1>
 
             <p className='text-sm md:text-xs py-4 text-center dark:text-light'>Please fill out the form below with your contact details, along with your message, and I will respond as soon as I can.</p>
 
             <form
-            className='rounded-lg shadow-xl flex flex-col px-8 py-8 bg-light dark:bg-dark'
+            className='rounded-lg shadow-xl flex flex-col px-8 py-8 bg-light dark:bg-dark sm:text-sm'
             >
               {/*Name*/}
               <div className='flex flex-col'>
@@ -157,7 +159,7 @@ const contact = () => {
                 }}
                 /> */}
 
-                <input
+                {/* <input
                 name="phonenumber"
                 type='tel'
                 value={phoneNumber}
@@ -165,7 +167,17 @@ const contact = () => {
                   setPhoneNumber(event.target.value)
                 }}
                 className='bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-dark dark:ring-light font-light text-dark dark:text-light'
-                /> 
+                />  */}
+              
+                <PhoneInput 
+                placeholder="Enter phone number"
+                defaultCountry="GB"
+                value={value}
+                onChange={setValue}
+                className='bg-transparent py-4 focus:outline-none focus:rounded-md focus:ring-1 ring-dark dark:ring-light font-light text-dark scale-105 px-3 mt-2 dark:border-light border-dark/75'
+                />
+                            
+                
 
               </div>
 
