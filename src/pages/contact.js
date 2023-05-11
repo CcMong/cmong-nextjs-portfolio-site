@@ -2,7 +2,7 @@ import AnimatedText from '@/components/AnimatedText';
 import Layout from '@/components/Layout';
 import TransitionEffect from '@/components/TransitionEffect';
 import Head from 'next/head';
-import React from 'react';
+import React, { use } from 'react';
 import Image from 'next/image';
 import contactImg from "../../public/images/contact.jpg";
 import { motion } from 'framer-motion';
@@ -16,12 +16,102 @@ import "react-phone-number-input/style.css";
 
 const contact = () => {
 
-  const [fullName, setFullName] = useState("");
+  // States to Manage Contact Form Fields
+
+  const [fullname, setFullname] = useState("");
   const [email, setEmail] = useState("");
-  const [value, setValue] = useState();
+  const [value, setValue] = useState(); // for the phone number
   const [company, setCompany] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+
+  // State to Manage Form Validation
+
+  const [errors, setErrors] = useState({});
+
+  // Setting Button Text on Form Submission
+
+  const [buttonText, setButtonText] = useState("Submit");
+
+  // States to Set Success of Failure Messages
+
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [showFailureMessage, setShowFailureMessage] = useState(false);
+
+  // Validation Check Method
+
+  const handleValidation = () => {
+    let tempErrors = {};
+    let isValid = true;
+
+    if(fullname.length <= 0) {
+      tempErrors["fullname"] = true;
+      isValid = false;
+    }
+    if(email.length <= 0) {
+      tempErrors["email"] = true;
+      isValid = false;
+    }
+    if(value.length <= 0) {
+      tempErrors["value"] = true;
+      isValid = false;
+    }
+    if(subject.length <= 0) {
+      tempErrors["subject"] = true;
+      isValid = false;
+    }
+    if(message.length <= 0) {
+      tempErrors["message"] = true;
+      isValid = false;
+    }
+
+    setErrors({ ...tempErrors });
+    console.log("errors", errors);
+    return isValid;
+  };
+
+  // Handling Form Submission
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    let isValidForm = handleValidation();
+
+    if(isValidForm) {
+
+      setButtonText("Sending...");
+
+      const res = await fetch("/api/sendgrid", {
+        body: JSON.stringify({
+          fullname: fullname,
+          email: email,
+          phonenumber: value,
+          subject: subject,
+          message: message,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "POST",
+      });
+
+      const { error } = await res.json();
+
+      if(error) {
+        console.log(error);
+        setShowSuccessMessage(false);
+        setShowFailureMessage(true);
+        setButtonText("Submit");
+        return;
+      }
+
+      setShowSuccessMessage(true);
+      setShowFailureMessage(false);
+      setButtonText("Sent");
+
+    }    
+    console.log(fullname, email, value, subject, message)
+  };
 
   return (
     <>
@@ -114,11 +204,11 @@ const contact = () => {
                 <input
                 name="fullname"
                 type='text'
-                value={fullName}
+                value={fullname}
                 onChange={(event) => {
-                  setFullName(event.target.value)
+                  setFullname(event.target.value)
                 }}
-                className='bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-dark dark:ring-light font-light text-dark dark:text-light'
+                className='bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-dark dark:ring-light font-light text-dark dark:text-light border-dark/75 dark:border-light/50'
                 />
               </div>
 
@@ -138,7 +228,7 @@ const contact = () => {
                 onChange={(event) => {
                   setEmail(event.target.value)
                 }}
-                className='bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-dark dark:ring-light font-light text-dark dark:text-light'
+                className='bg-transparent border-b border-dark/75 dark:border-light/50 py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-dark dark:ring-light font-light text-dark dark:text-light'
                 /> 
               </div>
 
@@ -149,6 +239,7 @@ const contact = () => {
                 className='dark:text-light mt-8'
                 >
                   Phone Number:
+                  <br /><span className='sm:text-[8px] text-[10px]'>(Click on the flag to select the appropriate international code)</span>
                 </label>
 
                 {/* <PhoneInput 
@@ -197,7 +288,7 @@ const contact = () => {
                 onChange={(event) => {
                   setSubject(event.target.value)
                 }}
-                className='bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-dark dark:ring-light font-light text-dark dark:text-light'
+                className='bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-dark dark:ring-light font-light text-dark dark:text-light border-dark/75 dark:border-light/50'
                 /> 
               </div>
 
@@ -208,6 +299,7 @@ const contact = () => {
                 className='dark:text-light mt-8'
                 >
                   Message<span className='dark:text-primaryDark text-red-500'>*</span>:
+                  
                 </label>
 
                 <textarea
@@ -218,9 +310,33 @@ const contact = () => {
                 onChange={(event) => {
                   setMessage(event.target.value)
                 }}
-                className='bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-dark dark:ring-light font-light text-dark dark:text-light'
+                className='bg-transparent border py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-dark dark:ring-light font-light text-dark dark:text-light border-dark/75 dark:border-light/50'
                 
                 /> 
+              </div>
+
+              {/*Send Button*/}
+
+              <div className="flex flex-row items-center justify-center">
+                <button
+                  type="submit"
+                  className="px-6 mt-8 py-2 bg-dark hover:bg-light dark:bg-light hover:dark:bg-dark hover:dark:border-light border-dark border-solid border-2 dark:border-dark text-light dark:text-dark hover:text-dark hover:dark:text-light rounded-xl text-lg font-bold flex flex-row items-center hover:scale-105 ease-in-out duration-300 group"
+                >
+                  Submit
+                  <svg
+                    width="34"
+                    height="34"
+                    viewBox="0 0 24 24"
+                    className="dark:text-primary text-primaryDark group-hover:dark:text-primaryDark group-hover:text-primary ml-2"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9.00967 5.12761H11.0097C12.1142 5.12761 13.468 5.89682 14.0335 6.8457L16.5089 11H21.0097C21.562 11 22.0097 11.4477 22.0097 12C22.0097 12.5523 21.562 13 21.0097 13H16.4138L13.9383 17.1543C13.3729 18.1032 12.0191 18.8724 10.9145 18.8724H8.91454L12.4138 13H5.42485L3.99036 15.4529H1.99036L4.00967 12L4.00967 11.967L2.00967 8.54712H4.00967L5.44417 11H12.5089L9.00967 5.12761Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
               </div>
 
 
