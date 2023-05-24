@@ -14,7 +14,7 @@ import { useState } from 'react';
 import PhoneInput from 'react-phone-number-input';
 import "react-phone-number-input/style.css";
 
-const contact = () => {
+export const Contact = () => {
 
   // States to Manage Contact Form Fields
 
@@ -389,6 +389,12 @@ const contact = () => {
     </main>
     </>
     
+  )
+}
+
+const contact = () => {
+  return (
+    <Contact />
   )
 }
 

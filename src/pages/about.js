@@ -56,7 +56,7 @@ const about = () => {
                     </p>  
 
                     <p className='font-medium my-4 dark:text-light'>
-                    <span className='font-bold text-cyan-700 dark:text-primaryDark'>Web development</span> goes beyond beauty - it solves problems and crafts intuitive, <span className='font-bold text-cyan-700 dark:text-primaryDark'>value-rich experiences for users</span>. I am passionate about turning an idea or vision into something that, quite simply, makes people's lives easier.
+                    <span className='font-bold text-cyan-700 dark:text-primaryDark'>Web development</span> goes beyond beauty - it solves problems and crafts intuitive, <span className='font-bold text-cyan-700 dark:text-primaryDark'>value-rich experiences for users</span>. I am passionate about turning an idea or vision into something that, quite simply, makes people&apos;s lives easier.
                     </p>
 
                     <p className='font-medium my-4 dark:text-light'>
