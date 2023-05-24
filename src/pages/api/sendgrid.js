@@ -1,12 +1,15 @@
 import sendgrid from "@sendgrid/mail";
 
-sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
+sendgrid.setApiKey("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")
+//(process.env.SENDGRID_API_KEY);
+// yFCkVX6JSoODqt4qUlzg5A.BpssxLC_Kb2E7sywxGtbrF6UGjUTsUojbUGyWC1luc0
+// SG.yFCkVX6JSoODqt4qUlzg5A.
 
 async function sendEmail(req, res) {
     try {
         await sendgrid.send({
             to: "fullstackcodex@gmail.com", // where email will be received
-            from: "charlesmong2@gmail.com", // where the email will originate from. Could be website/domain email
+            from: "fullstackcodex@gmail.com", // where the email will originate from. Could be website/domain email
             subject: `[Lead from Portfolio Website]: ${req.body.subject}`,
             html: `<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
             <html lang="en">

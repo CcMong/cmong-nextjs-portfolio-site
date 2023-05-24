@@ -85,9 +85,9 @@ const contact = () => {
         body: JSON.stringify({
           fullname: fullname,
           email: email,
-          phonenumber: value,
+          //phonenumber: value,
           subject: subject,
-          message: message,
+          message: message
         }),
         headers: {
           "Content-Type": "application/json",
@@ -107,9 +107,17 @@ const contact = () => {
 
       setShowSuccessMessage(true);
       setShowFailureMessage(false);
-      setButtonText("Sent");
+      setButtonText("Send");
 
+      // Then reset the form fields
+
+      setFullname("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
+      setValue("");
     }    
+
     console.log(fullname, email, value, subject, message)
   };
 
@@ -187,9 +195,10 @@ const contact = () => {
             
             <h1 className='text-2xl font-extrabold text-center dark:text-light my-8'>Let&apos;s Talk About Your Projects...</h1>
 
-            <p className='text-sm md:text-xs py-4 text-center dark:text-light'>Please fill out the form below with your contact details, along with your message, and I will respond as soon as I can.</p>
+            <p className='text-sm md:text-xs py-4 px-8 text-center dark:text-light'>Please fill out the form below with your contact details, along with your message, and I will respond as soon as I can.</p>
 
             <form
+            onSubmit={handleSubmit}
             className='rounded-lg shadow-xl flex flex-col px-8 py-8 bg-light dark:bg-dark sm:text-sm'
             >
               {/*Name*/}
@@ -210,6 +219,9 @@ const contact = () => {
                 }}
                 className='bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-dark dark:ring-light font-light text-dark dark:text-light border-dark/75 dark:border-light/50'
                 />
+                {errors?.fullname && (
+                  <p className='text-primary dark:text-primaryDark my-2 text-xs'>Please enter your name. This field cannot be left empty.</p>
+                )}
               </div>
 
               {/*Email*/}
@@ -230,6 +242,9 @@ const contact = () => {
                 }}
                 className='bg-transparent border-b border-dark/75 dark:border-light/50 py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-dark dark:ring-light font-light text-dark dark:text-light'
                 /> 
+                {errors?.email && (
+                  <p className='text-primary dark:text-primaryDark my-2 text-xs'>Please enter your email. This field cannot be left empty.</p>
+                )}
               </div>
 
               {/*Phone Number*/}
@@ -266,8 +281,7 @@ const contact = () => {
                 value={value}
                 onChange={setValue}
                 className='bg-transparent py-4 focus:outline-none focus:rounded-md focus:ring-1 ring-dark dark:ring-light font-light text-dark scale-105 px-3 mt-2 dark:border-light border-dark/75'
-                />
-                            
+                />                           
                 
 
               </div>
@@ -290,6 +304,10 @@ const contact = () => {
                 }}
                 className='bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-dark dark:ring-light font-light text-dark dark:text-light border-dark/75 dark:border-light/50'
                 /> 
+
+                {errors?.subject && (
+                  <p className='text-primary dark:text-primaryDark my-2 text-xs'>Please enter a subject. This field cannot be left empty.</p>
+                )}
               </div>
 
               {/*Message*/}
@@ -313,6 +331,10 @@ const contact = () => {
                 className='bg-transparent border py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-dark dark:ring-light font-light text-dark dark:text-light border-dark/75 dark:border-light/50'
                 
                 /> 
+
+                {errors?.message && (
+                  <p className='text-primary dark:text-primaryDark my-2 text-xs'>Please enter a message. This field cannot be left empty.</p>
+                )}
               </div>
 
               {/*Send Button*/}
@@ -322,7 +344,7 @@ const contact = () => {
                   type="submit"
                   className="px-6 mt-8 py-2 bg-dark hover:bg-light dark:bg-light hover:dark:bg-dark hover:dark:border-light border-dark border-solid border-2 dark:border-dark text-light dark:text-dark hover:text-dark hover:dark:text-light rounded-xl text-lg font-bold flex flex-row items-center hover:scale-105 ease-in-out duration-300 group"
                 >
-                  Submit
+                  {buttonText}
                   <svg
                     width="34"
                     height="34"
@@ -338,8 +360,23 @@ const contact = () => {
                   </svg>
                 </button>
               </div>
+              
+              
+              <div className='text-primary dark:text-primaryDark text-xs sm:text-xxs mt-4'>
 
+                {showSuccessMessage && (
+                  <p>
+                    Thank you very much! Your message has been delivered.
+                  </p>
+                )}
 
+                {showFailureMessage && (
+                  <p>
+                    Oops! Something went wrong. Please try again.
+                  </p>
+                )}
+
+              </div>
 
             </form>
 

@@ -150,7 +150,7 @@ const portfolio = () => {
                         title="&ldquo;Perfect Movie Night&rdquo; App"
                         summary="Streaming platform aggregation app built and deployed with jQuery, Bootstrap, Server APIs and Github Pages. Users can easily search, access and store information for movies and TV shows across ten of the largest streaming platforms all from one place."
                         projectUrl="https://drrobertson9673.github.io/Perfect_Movie_Night/index.html"
-                        githubUrl="/"                        
+                        githubUrl="https://github.com/DRRobertson9673/Perfect_Movie_Night"                        
                         />                                                
                     </div>
 
@@ -160,21 +160,21 @@ const portfolio = () => {
                         imgUrl="/images/weather-app.jpg"
                         title="Travel Companion Weather App"
                         summary="Created and deployed with JavaScript, Bootstrap, Server APIs and Github Pages. Access 5-day forecast travel weather information on-the-go in multiple cities."
-                        projectUrl="/"
-                        githubUrl="/"                        
+                        projectUrl="https://ccmong.github.io/travel-companion-weather-app/"
+                        githubUrl="https://github.com/CcMong/travel-companion-weather-app"                        
                         />
                     </div>
 
-                    {/* <div className='col-span-6 sm:col-span-12'>
+                    <div className='col-span-6 sm:col-span-12'>
                         <Project 
                         type="Recent Project"
-                        imgUrl="/images/weather-app.jpg"
-                        title="Travel Companion Weather App"
-                        summary="Created and deployed with JavaScript, Bootstrap, Server APIs and Github Pages. Access 5-day forecast travel weather information on-the-go in multiple cities."
-                        projectUrl="/"
-                        githubUrl="/"                        
+                        imgUrl="/images/oppsum-screenshot-home2.png"
+                        title="AI Article Summary Generator"
+                        summary="Created with React, Redux Toolkit, Vite and Tailwind CSS, and deployed on Netlify. Oppsumm extracts any article or page content from agiven URL, and generates a concise, info-rich summary quickly and effortlessly."
+                        projectUrl="https://spiffy-cassata-e4acef.netlify.app/"
+                        githubUrl="https://github.com/CcMong/ai-article-summary-generator"                        
                         />
-                    </div> */}
+                    </div>
                     
                     {/* <div className='col-span-6'>
                         Project 3
