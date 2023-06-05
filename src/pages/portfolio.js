@@ -170,7 +170,7 @@ const portfolio = () => {
                         type="Recent Project"
                         imgUrl="/images/oppsum-screenshot-home2.png"
                         title="AI Article Summary Generator"
-                        summary="Created with React, Redux Toolkit, Vite and Tailwind CSS, and deployed on Netlify. Oppsumm extracts any article or page content from agiven URL, and generates a concise, info-rich summary quickly and effortlessly."
+                        summary="Created with React, Redux Toolkit, Vite and Tailwind CSS, and deployed on Netlify. Oppsumm extracts any article or page content from a given URL, and generates a concise, info-rich summary quickly and effortlessly."
                         projectUrl="https://spiffy-cassata-e4acef.netlify.app/"
                         githubUrl="https://github.com/CcMong/ai-article-summary-generator"                        
                         />

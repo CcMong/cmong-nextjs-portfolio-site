@@ -184,7 +184,7 @@ const Navbar = () => {
                     />
                 </motion.a> 
                 
-                <motion.a href="/CV-C.MONG.pdf" target={"_blank"}
+                <motion.a href="/CV-C.MONG-fewdev-.pdf" target={"_blank"}
                 whileHover={{y:-3}}
                 className='w-6 ml-3'>
                     <CvIcon />
